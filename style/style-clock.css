@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+.clock {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 100%;
+    border: 10px double black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.center {
+    height: 3%;
+    width: 3%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: black;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+.top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.second {
+    height: 40%;
+    width: 1%;
+    background-color: red;
+    position: absolute;
+    top: -37%;
+    right: 0;
+    bottom: 2.5%;
+    left: 0;
+    margin: auto;
+    z-index: 0;
+    
+    animation: rotate 60s steps(60) 0s infinite normal none; /* rotate once every minute */
+
+    transform-origin: 50% 100%; /* move the center to rotate */
+}
+
+.minute {
+    height: 30%;
+    width: 1%;
+    background-color: black;
+    position: absolute;
+    top: -30%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    
+    animation: rotate 3600s linear 0s infinite normal none; /* rotate once every hour */
+
+    transform-origin: 50% 100%; /* move the center to rotate */
+}
+
+.hour {
+    height: 20%;
+    width: 2%;
+    background-color: black;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    
+    animation: rotate 43200s linear 0s infinite normal none; /* rotate once every 12 hours */
+
+    transform-origin: 50% 100%; /* move the center to rotate */
+}
+
+/* Animation */
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
